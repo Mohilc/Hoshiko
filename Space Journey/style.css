@@ -1,0 +1,11 @@
+/* author: https://codepen.io/akm2/pen/RwQXLdP
+Akimitsu Hamamuro
+ */
+
+body { background-color: hsl(256, 100%, 5%); font: 30px sans-serif; overflow: hidden; 
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+canvas { position: absolute; 
+}
