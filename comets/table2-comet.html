@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near-Earth Objects (NEO) Close Approaches</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Near Earth Object/galaxy/style.css">
+    <!--start of solor background-->
+    <section>
+         <div class="experience"></div>
+         <script src="/Near Earth Object/galaxy/main.js"></script>
+    </section>
+    <!--End  of solor background-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /*background-color: #f4f4f9;*/   
+        }
+        html, body{
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            color: white;
+        }
+        th {
+            background-color: #d045e2;
+            color: rgb(243, 243, 243);
+        }
+        
+       /* tr:hover {
+            background-color: #ddd;
+        }*/
+        caption {
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+        ::-webkit-scrollbar{
+        height: 0;
+        width: .5rem;
+        }
+        ::-webkit-scrollbar-track{
+        background: #000;
+        }
+        ::-webkit-scrollbar-thumb{
+        background: linear-gradient(to right, #7f00ff, #e100ff);
+        border-radius: 6rem;
+        max-height: 12px;
+        
+        }
+       
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #CFDEF3;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.data-entry {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #7f00ff;
+}
+
+p {
+    font-size: 1.1em;
+    color: #E0EAFC;
+}
+
+p strong {
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Comet Name</th>
+            <th>Eccentricity</th>
+            <th>Inclination</th>
+            <th>Orbital Period</th>
+            <th>MOID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1P/Harlley</td>
+            <td>0.9671</td>
+            <td>162.26</td>
+            <td>75.32</td>
+            <td>	0.0638</td>
+          </tr>
+          <tr>
+            <td>2P/Encke</td>
+            <td>R0.8483</td>
+            <td>	11.78</td>
+            <td>3.3</td>
+            <td>0.1731</td>
+          </tr>
+          <tr>
+            <td>3D/Biela</td>
+            <td>0.7513</td>
+            <td>13.22</td>
+            <td>6.65</td>
+            <td>0.000518</td>
+          </tr>
+          <tr>
+            <td>5D/Brorsen</td>
+            <td>0.8098</td>
+            <td>29.38</td>
+            <td>5.46</td>
+            <td>0.3666</td>
+          </tr>
+          <tr>
+            <td>7P/Pons-Winnecke</td>
+            <td>0.6375</td>
+            <td>22.34</td>
+            <td>6.32</td>
+            <td>0.2242</td>
+          </tr>
+          <tr>
+            <td>8P/Tuttle	</td>
+            <td>0.8198	</td>
+            <td>54.98</td>
+            <td>13.61</td>
+            <td>0.09531</td>
+          </tr>
+          <tr>
+            <td>12P/Pons-Brooks	</td>
+            <td>0.9548</td>
+            <td>74.18</td>
+            <td>70.85</td>
+            <td>0.1873</td>
+          </tr>
+          <tr>
+            <td>13P/Olbers</td>
+            <td>0.9303</td>
+            <td>44.61	</td>
+            <td>69.52</td>
+            <td>0.4772</td>
+          </tr>
+          <tr>
+            <td>15P/Finlay	</td>
+            <td>0.7202</td>
+            <td> 6.80</td>
+            <td>6.51</td>
+            <td>0.009433</td>
+          </tr>
+    
+          
+          <tr>
+              <td>18D/Perrine-Mrkos		</td>
+              <td>0.6426	</td>
+              <td>17.76		</td>
+              <td>6.72</td>
+              <td>0.2892</td>
+            </tr>
+            <tr>
+              <td>20D/Westphal	</td>
+              <td>0.9198</td>
+              <td> 40.89</td>
+              <td>	61.87</td>
+              <td>0.4683</td>
+            </tr>
+            <tr>
+            <td>21P/Giacobini-Zinner		</td>
+            <td>	0.7068</td>
+            <td> 	31.91</td>
+            <td>6.59</td>
+            <td>0.0354</td>
+          </tr>
+          </tr>
+            <td>23P/Brorsen-Metcalf		</td>
+            <td>0.9720</td>
+            <td> 19.33</td>
+            <td>70.52</td>
+            <td>0.1939</td>
+          </tr>
+          <tr>
+            <td>24P/Schaumasse			</td>
+            <td>0.7048</td>
+            <td> 11.75</td>
+            <td>8.25</td>
+            <td>0.2822</td>
+          </tr>
+          <tr>
+            <td>26P/Grigg-Skjellerup			</td>
+            <td>	0.6403</td>
+            <td> 	22.43</td>
+            <td>5.24</td>
+            <td>0.07948</td>
+          </tr>
+          <tr>
+            <td>27P/Crommelin		</td>
+            <td>	0.9190</td>
+            <td> 	28.97</td>
+            <td>28.07	</td>
+            <td>0.2152</td>
+          </tr>
+          <tr>
+            <td>41P/Tuttle-Giacobini-Kresak			</td>
+            <td>	0.6604	/td>
+            <td> 9.23</td>
+            <td>5.42</td>
+            <td>0.1354</td>
+          </tr>
+          <tr>
+            <td>45P/Honda-Mrkos-Pajdusakova			</td>
+            <td>	0.8247</td>
+            <td> 4.25</td>
+            <td>5.25</td>
+            <td>0.06007</td>
+          </tr>
+           <tr>
+            <td>46P/Wirtanen			</td>
+            <td>	0.6592	</td>
+            <td> 	11.76</td>
+            <td>5.43</td>
+            <td>0.06821</td>
+          </tr>
+          <tr>
+            <td>55P/Tempel-Tuttle			</td>
+            <td>	0.9056</td>
+            <td> 162.49</td>
+            <td>33.24</td>
+            <td>0.008481</td>
+          </tr>
+          <tr>
+            <td>66P/du Toit			</td>
+            <td>	0.7877</td>
+            <td>18.70</td>
+            <td>14.71</td>
+            <td>0.4304</td>
+          </tr>
+          <tr>
+            <td>67P/Churyumov-Gerasimenko				</td>
+            <td>	0.6410</td>
+            <td>7.04</td>
+            <td>6.44</td>
+            <td>0.2572</td>
+          </tr>
+          <tr>
+            <td>72P/Denning-Fujikawa			</td>
+            <td>	0.8192</td>
+            <td>9.17</td>
+            <td>9.03</td>
+            <td>0.08525</td>
+          </tr>
+          </tbody>
+      </table>
+<!--Starting detailing section-->
+
+<!--<div class="container">
+    <h1>NEO Close-Approach Data</h1>
+    <div class="data-entry">
+        <h2>1. Object Name or Designation</h2>
+        <p>The official designation of the NEO, such as (2023 TG14) or (2007 UT3). These can be provisional names assigned when the object is first discovered.</p>
+    </div>
+    <div class="data-entry">
+        <h2>2. Close-Approach Date and Time</h2>
+        <p>The specific date and time when the NEO will come closest to Earth, typically listed in UTC.</p>
+        <p><strong>Example:</strong> 2024-Oct-24 23:34</p>
+    </div>
+    <div class="data-entry">
+        <h2>3. Nominal Distance (AU)</h2>
+        <p>The expected distance between the NEO and Earth at closest approach, measured in Astronomical Units (AU).</p>
+        <p><strong>Example:</strong> 0.01681 AU (about 2.5 million kilometers).</p>
+    </div>
+    <div class="data-entry">
+        <h2>4. Minimum Possible Distance (AU)</h2>
+        <p>The minimum possible distance that could occur, factoring in uncertainties in the NEO’s orbit.</p>
+        <p><strong>Example:</strong> 0.01605 AU</p>
+    </div>
+    <div class="data-entry">
+        <h2>5. Relative Velocity (km/s)</h2>
+        <p>The speed at which the NEO will pass Earth, measured in kilometers per second.</p>
+        <p><strong>Example:</strong> 6.90 km/s</p>
+    </div>
+    <div class="data-entry">
+        <h2>6. Orbit Intersection Distance (AU)</h2>
+        <p>This shows how closely the orbit of the NEO intersects with Earth's orbit.</p>
+        <p><strong>Example:</strong> 0.01605 AU</p>
+    </div>
+    <div class="data-entry">
+        <h2>7. Magnitude (H)</h2>
+        <p>The absolute magnitude of the object, which is related to its brightness and size.</p>
+        <p><strong>Example:</strong> 25.8 H</p>
+    </div>
+    <div class="data-entry">
+        <h2>8. Estimated Diameter</h2>
+        <p>An estimate of the NEO’s size based on its brightness and reflectivity, usually provided as a range.</p>
+        <p><strong>Example:</strong> 18 m - 40 m</p>
+    </div>
+    <div class="data-entry">
+        <h2>9. Condition Code</h2>
+        <p>A value from 0 to 9 that indicates the uncertainty in the NEO’s orbit. Lower numbers indicate higher confidence.</p>
+        <p><strong>Example:</strong> 0 (high confidence)</p>
+    </div>
+    <div class="data-entry">
+        <h2>10. Earth MOID (Minimum Orbit Intersection Distance)</h2>
+        <p>The smallest distance between the orbit of the NEO and Earth’s orbit, helping assess future impact risks.</p>
+        <p><strong>Example:</strong> 0.01605 AU</p>
+    </div>
+</div>-->
+<!--End detailing section-->
+
+</body>
+</html>
