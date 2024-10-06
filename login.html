@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="nasa.css">
+    <title>HOSHIKO</title>
+</head>
+<body>
+    <section1>
+   <!--start login page-->
+    <form class="form login" id="position-login">
+      <div  class="container-login">
+        <div class="form-title"><span>sign in</span></div>
+          <div class="title-2"><span>HOSHIKO</span></div>
+          <div>
+            <form action="">
+                <section class="bg-stars">
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </section>  
+                <div class="login__content">
+                    <div class="login__box">
+                        <i class="ri-user-3-line login__icon"></i>
+
+                        <div class="login__box-input">
+                            <input type="email" required class="login__input" id="login-email" placeholder=" ">
+                            <label for="login-email" class="login__label">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="login__box">
+                        <i class="ri-lock-2-line login__icon"></i>
+
+                        <div class="login__box-input">
+                            <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                            <label for="login-pass" class="login__label">Password</label>
+                            <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login__check">
+                    <div class="login__check-group">
+                        <input type="checkbox" class="login__check-input" id="login-check">
+                        <label for="login-check" class="login__check-label">Remember me</label>
+                    </div>
+
+                    <a href="#" class="login__forgot">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login__button">Login</button>
+
+                <p class="login__register">
+                    Don't have an account? <a href="#">Register</a>
+                </p>
+            </form>
+        </div> 
+  </div>   
+   </form>
+</section1>
+ <!--end login page-->
+<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+<script src="script.js"></script>
+<!--script for menu toggling-->
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navList = document.querySelector('.navlist');
+
+  menuIcon.addEventListener('click', () => {
+      navList.classList.toggle('open');  // Toggle the 'open' class
+  });
+</script>
+
+</body>
+
+</html>

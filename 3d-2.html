@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOSHIKO - 3D Solar System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="opening hide-UI view-2D zoom-large data-close controls-close">
+        <div id="data">
+            <!-- Planets as buttons -->
+            <button class="planet-btn sun" title="Sun" onclick="navigateTo('/planets/sun/index.html')">Sun</button>
+            <button class="planet-btn mercury" title="Mercury" onclick="navigateTo('/planets/mercury/index.html')">Mercury</button>
+            <button class="planet-btn venus" title="Venus" onclick="navigateTo('/planets/venus/index.html')">Venus</button>
+            <button class="planet-btn earth" title="Earth" onclick="navigateTo('/planets/earth/index.html')">Earth</button>
+            <button class="planet-btn mars" title="Mars" onclick="navigateTo('/planets/mars/index.html')">Mars</button>
+            <button class="planet-btn jupiter" title="Jupiter" onclick="navigateTo('/planets/jupiter/index.html')">Jupiter</button>
+            <button class="planet-btn saturn" title="Saturn" onclick="navigateTo('/planets/saturn/index.html')">Saturn</button>
+            <button class="planet-btn uranus" title="Uranus" onclick="navigateTo('/planets/uranus/index.html')">Uranus</button>
+            <button class="planet-btn neptune" title="Neptune" onclick="navigateTo('/planets/neptune/index.html')">Neptune</button>
+        </div>
+
+        <div id="universe" class="scale-stretched">
+            <!-- Solar system structure here (like orbits) -->
+            <div id="galaxy">
+                <div id="solar-system" class="earth">
+                    <!-- The orbits and planets visualization -->
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript to handle page navigation -->
+        <script>
+            function navigateTo(page) {
+                window.location.href = page;
+            }
+        </script>
+    </section>
+
+    <style>
+        /* Styles for the planets */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        #data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .planet-btn {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            margin: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .planet-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .sun { background-color: yellow; }
+        .mercury { background-color: gray; }
+        .venus { background-color: gold; }
+        .earth { background-color: blue; }
+        .mars { background-color: red; }
+        .jupiter { background-color: orange; }
+        .saturn { background-color: lightyellow; }
+        .uranus { background-color: lightblue; }
+        .neptune { background-color: blueviolet; }
+
+        /* Universe styles */
+        #universe {
+            margin-top: 50px;
+        }
+    </style>
+</body>
+</html>

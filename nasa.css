@@ -1,0 +1,983 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style:none;
+}
+#preloader{
+    background: #000 url(loader.jpeg) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transform: rotate(360deg);
+} 
+:root{
+    --color-text:#cdc6c3;
+    --hover-color: #00B4DB;
+    --neon-box-shadow:0 0.5rem #70efbf;
+    --index: calc(1vw + 1vh);
+
+}
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+::-webkit-scrollbar-track{
+    background: #000;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, #000428, #004e92);
+    border-radius: 5rem;
+}
+body{
+    font-family: "outfit",sans-serif;
+    background-image: url("Space Travel Images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+}  
+
+a{
+    color:#fff;
+}
+header{
+    position:fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    padding:20px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+    background: linear-gradient(to right, #000428, #08487f);
+    max-height: 65px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 22px;
+    color:var(--hover-color);
+}
+.logo img{
+    max-width: 100%;
+    width: 40px;
+    height: auto;
+}
+/*navbar------------------------------------------------------------------------*/
+header .navlist{
+    display: flex;
+}
+.navlist li{
+    margin:0 1.5rem;
+}
+.navlist li .nav-item{
+    position:relative;
+    padding:17px 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all .2s ease;
+}
+.navlist li .nav-item::before{      /* this code for under line effects in navbar home,about us....*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-1px;
+    width: 0;
+    height: 1px;
+    background:var(--hover-color);
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+.navlist li .nav-item:hover::before{
+    width: 100%;
+}
+.navlist li .nav-item:hover{
+    color:var(--hover-color);
+}
+.right-side{
+    display: flex;
+    text-align: center; 
+}
+.marsbtn{
+    background: linear-gradient(90deg, #00B4DB 0%, #0083B0 100%);
+    height: 26px;
+    line-height: 26px;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-weight: 600;
+    letter-spacing: 1px ;
+    transition: all .3s ease;
+    white-space: nowrap;
+    color: black;
+    display: inline-block;
+}
+.marsbtn:hover{
+    background: linear-gradient(90deg, #00B4DB 0%, #0083B0 100%);
+    box-shadow: 0 5px 10px  #0083B0;
+    color: #000;
+    text-decoration:none;
+    
+}
+#menu-icon{                /*menu bar icon color*/
+    color: #70efbf;
+    font-size: 2.5rem;
+    display: none;
+}
+section{
+    padding: 100px 12%;
+}
+/*home section------------------------------------------------------------------*/
+.home-img img.hero{
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    animation: floatimg 4s ease-in-out infinite;
+}
+.earth-rotate{
+    width: 100%;
+}
+.earth-rotate img.earth{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index:-1;
+    width:calc(var(--index)*45);
+    animation: rotate 300s infinite linear;
+}
+.home{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    color: #fff;
+    width: 100%;
+}
+.home-text h1,h2{
+    font-size:calc(var(--index)*2);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #474747;
+
+}
+.home-text .marsbtn{
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+}
+span{
+    color:#fff;
+}
+.moon-light{                          /*moon code */
+    position: relative;
+    animation: floatimg 6s ease-in-out infinite;
+}
+.home-img{
+    position: relative;
+  }
+img.moon-light{
+    position: absolute;
+    left: 0;
+    mix-blend-mode: screen;
+    width: 90px;
+}
+/* Flight list css------------------------------------------------------------------------------------------------------------------*/
+.flight-list{
+    position: relative;
+}
+.flight-list .container{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.container .flight-box{
+    width: 200px;
+    padding: 2rem 1.5rem 2rem;
+    text-align: center;
+    background-image: url("Space Travel Images/cardBg.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: #ffffff;
+    z-index: 2;
+    margin: 2rem.5rem;
+    height:55vh;
+}
+.flight-box img{
+    width: 120px;
+    margin: -4rem auto 0 auto;
+    animation: floatimg 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 .5rem #1797ff);
+    border-radius: 50%;
+}
+.container .flight-box h2{
+    color: #70efbf;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+.flight-box p{
+    color:#dddcdc;
+    line-height: 1.5rem;
+    font-size: .9rem;
+}
+.flight-box marsbtn{
+    margin-top: 1rem;
+    height: 32px;
+    line-height: 23px;
+    color: #000;
+    font-size: .8rem;
+    font-weight: 700;
+}
+/* mission history css------------------------------------------------------------------------------------------------------------------*/
+.mission-history {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.img-mission {
+    position: relative;
+}
+
+.circular-animate {
+    position: absolute;
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    background: #e8e9e8;
+    border-radius: 50%;
+    box-shadow: 0.0.5rem hsl(0, 0%, 0%);
+    text-align: right;
+}
+
+.circular-animate span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+    opacity: .4;
+    animation: circularanimate 4s ease-out infinite;
+    animation-delay: calc(1s*var(--i));
+}
+
+.img-mission img {
+    height: auto;
+    width: 200px;
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+.text-mission {
+    color: whitesmoke;
+    font-size: 3vmin;
+    /*text-shadow:  2px 1px 1px #020202;
+    font-weight: 400;*/
+}
+
+.text-mission h3 {
+    font-size: 2.5rem;
+    text-shadow: 2px 1px 1px #454545;
+}
+
+.text-mission {
+    margin: 1rem auto;
+    line-height: 2rem;
+}
+
+.text-mission .mission-btn a {
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+}
+
+/* Footer container */
+footer {
+    width: 100vw; /* Ensure it spans the entire viewport width */
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem 8%; /* Adjusted padding */
+    margin-left: -170px;
+    margin-right: -170px;
+    color: whitesmoke;
+    border-top: 1px solid #561389;
+}
+
+/* Grid container for the footer */
+.container-foot {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Distribute space properly */
+    grid-gap: 1rem;
+}
+
+/* Social media icons */
+.container-foot .leftbox .social-media {
+    display: flex;
+    gap: 10px; /* Adds space between icons */
+}
+
+.container-foot .title {
+    font-size: 1.5rem;
+    color: #8E2DE2;
+    font-weight: 600;
+}
+
+/* Paragraph styling */
+.leftbox p {
+    padding: 15px 0;
+    line-height: 1.5rem;
+}
+
+/* Social media link styles */
+.social-media a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #8E2DE2;
+}
+
+/* List styling */
+.social-media li {
+    margin-right: 1rem;
+}
+
+.quick-menu li {
+    margin-top: 1rem;
+}
+
+.quick-menu li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.quick-menu li a:hover {
+    color: #8E2DE2;
+}
+
+/* Contact info */
+.info li span {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    column-gap: 5px;
+}
+
+/* Copyright section */
+.copyright {
+    padding: 1.5rem 8%; /* Adjusted to match footer padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(117, 117, 117, 0.3);
+    width: 100vw; /* Ensure full-width for copyright section */
+    margin-left: -170px;
+    margin-right: -170px;
+    height: auto;
+}
+
+/* Copyright button/link styling */
+.copyright a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #8E2DE2;
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.copyright a:hover {
+    background-color: #561389;
+}
+
+/*header sticky css*/
+header .sticky{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 9px 12%;
+    border-bottom: 1px solid #3e0e62;
+}
+/*--start login page------------------------------------*/
+.form {
+    position: absolute;
+    display: block;
+    padding: 2.2rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background: linear-gradient(14deg, rgba(2,0,36, 0.8) 0%, rgba(24, 24, 65, 0.7) 66%, 
+              #144c63 100%), radial-gradient(circle, #02002480 0%, 
+              rgba(32, 15, 53, 0.2) 65%, rgba(14, 29, 28, 0.9) 100%);
+    border: 2px solid #fff;
+    -webkit-box-shadow: rgba(0,212,255) 0px 0px 50px -15px;
+    box-shadow: rgba(0,212,255) 0px 0px 50px -15px;
+    overflow: hidden;
+    z-index: +1;
+
+  }
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+section1,
+input,
+button {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: hsl(0, 0%, 100%);
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== LOGIN ===============*/
+#position-login{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.login__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-login {
+    position: relative;
+    background-color: hsla(0, 0%, 10%, 0.1);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+.login__title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.login__content,
+.login__box {
+    display: grid;
+}
+
+.login__content {
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.login__box {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.login__icon,
+.login__eye {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.login__input {
+    width: 100%;
+    padding-block: 0.8rem;
+    background: none;
+    color: #fffefe;
+    position: relative;
+    z-index: 1;
+}
+
+.login__box-input {
+    position: relative;
+}
+
+.login__label {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-weight: 500;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.login__eye {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.login__box:nth-child(2) input {
+    padding-right: 1.8rem;
+}
+
+.login__check,
+.login__check-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__check {
+    margin-bottom: 1.5rem;
+}
+
+.login__check-label,
+.login__forgot,
+.login__register {
+    font-size: 0.813rem;
+}
+
+.login__check-group {
+    column-gap: 0.5rem;
+}
+
+.login__check-input {
+    width: 16px;
+    height: 16px;
+}
+
+.login__forgot {
+    color: hsl(0, 0%, 100%);
+}
+
+.login__forgot:hover {
+    text-decoration: underline;
+}
+
+.login__button {
+    width:100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.login__register {
+    text-align: center;
+}
+
+.login__register a {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.login__register a:hover {
+    text-decoration: underline;
+}
+
+/* Input focus move up label */
+.login__input:focus+.login__label {
+    top: -12px;
+    font-size: 0.813rem;
+}
+
+/* Input focus sticky top label */
+.login__input:not(:placeholder-shown).login__input:not(:focus)+.login__label {
+    top: -12px;
+    font-size: 0.813rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .container-login {
+        width: 400px;
+        padding: 4rem 3rem 3.5rem;
+        border-radius: 1.5rem;
+
+    }
+
+    .login__title {
+        font-size: 2rem;
+    }
+}
+  
+  /*--------signup section---------*/
+  
+  .signup-link {
+    color: #c0c0c0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    font-family: monospace;
+  }
+  
+  .signup-link a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .up:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /*--------header section-----------*/
+  
+  .form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-family: monospace;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    animation-duration: 1.5s;
+    overflow: hidden;
+    transition: .12s;
+  }
+  
+  .form-title div {
+    animation: flickering 2s linear infinite both;
+  }
+  
+  .title-2 {
+    display: block;
+    margin-top: -0.5rem;
+    font-size: 2.1rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    -webkit-text-stroke: #fff 0.1rem;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    position: relative;
+    text-shadow: 0px 0px 16px #CECECE;
+  }
+  
+  .title-2 div::before,
+  .title-2 div::after {
+    content: '—';
+  }
+  
+  @keyframes flickering {
+    0%,
+    100% {
+      opacity: 1;
+    }
+  
+    41.99% {
+      opacity: 1;
+    }
+  
+    42% {
+      opacity: 0;
+    }
+  
+    43% {
+      opacity: 0;
+    }
+  
+    43.01% {
+      opacity: 1;
+    }
+  
+    47.99% {
+      opacity: 1;
+    }
+  
+    48% {
+      opacity: 0;
+    }
+  
+    49% {
+      opacity: 0;
+    }
+  
+    49.01% {
+      opacity: 1;
+    }
+  }
+  
+  /*---------shooting stars-----------*/
+  
+  
+  .bg-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
+  }
+  
+  @keyframes animateBg {
+    0%,100% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  .star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    animation: animate 3s linear infinite;
+  }
+  
+  .star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#fff,transparent);
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(315deg) translateX(0);
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: rotate(315deg) translateX(-1000px);
+      opacity: 0;
+    }
+  }
+  
+  .star:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+  }
+  
+  .star:nth-child(2) {
+    top: 0;
+    right: 100px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+  }
+  
+  .star:nth-child(3) {
+    top: 0;
+    right: 220px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
+  }
+  
+  .star:nth-child(4) {
+    top: 0;
+    right: -220px;
+    left: initial;
+    animation-delay: 1.6s;
+    animation-duration: 1.6s;
+  }
+
+  /*chatbot-----------------------------------------------------------*/
+/* From Uiverse.io by ahmed150up */ 
+.card {
+    width: 260px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .chat-window {
+    height: 220px;
+    overflow-y: scroll;
+  }
+  
+  .message-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .send-button {
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+/*keyframes----------------------------------------------*/
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes floatimg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-14px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes  circularanimate{
+    100%{
+        opacity: 0;
+        transform: scale(2);
+
+    }
+}
+/*media queries-------------------------------------------*/
+@media(max-width:1200px){
+    html{
+        font-size: 95%;
+    }
+    .navlist li{
+        margin: 0 1.2rem;
+        font-size: 1rem;
+
+    }
+}
+@media(max-width:991px){
+    header,header.sticky{
+        padding: 12px 3%;
+    }
+    .navlist li .nav-item{
+        padding: 23px 0;
+    }
+    .flight-list.container{
+        margin-top: 0;
+    }
+    section,.copyright{
+        padding: 2rem 3%;
+    }
+    .mission-history,.experience{
+        flex-direction: column;
+        height: 100%;
+    }
+    .img-mission{
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        margin-left: .7rem;
+        cursor: pointer;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.7);
+        height: 0;  /* Initially hidden */
+        visibility: hidden;  /* Hidden by default */
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        opacity: 0;  /* Invisible */
+        transition: all .7s ease;
+        overflow: hidden;  /* Prevent content from showing when hidden */
+    }
+
+    .open {
+        height: 100vh;  /* Full height when open */
+        visibility: visible;  /* Make it visible */
+        opacity: 1;  /* Make it fully visible */
+    }
+}
